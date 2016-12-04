@@ -4,9 +4,12 @@ using System.Collections;
 
 public class Score : MonoBehaviour {
 
-	int Deleted = 0;
+    //static variables aren’t destroyed on scene changes and stay 
+    //as long as the application is running.
 
-	public Text timerScore;
+    static int Deleted = 0;
+
+    public Text timerScore;
 
 
 	// Use this for initialization
@@ -20,8 +23,10 @@ public class Score : MonoBehaviour {
 	}
 
 	public void BlockRemoved () {
-		//Debug.Log ("DETECTED");
 		Deleted++;
 		Debug.Log (Deleted);
 	}
+
+    
+
 }

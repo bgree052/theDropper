@@ -4,8 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    GameObject KEPT;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -19,7 +21,11 @@ public class Win : MonoBehaviour {
 		Debug.Log ("Hit");
 
 		if (other.gameObject.CompareTag ("End")) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
-		}
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
+
+            KEPT.GetComponent<Score>().SendMessage("LevelCleared");
+
+        }
 	}
 }

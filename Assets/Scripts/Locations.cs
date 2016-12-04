@@ -18,14 +18,5 @@ public class Locations : MonoBehaviour {
 		
 	}
 
-	void OnMouseDown(){
-		Destroy (gameObject);
-
-		ScoreManager.GetComponent<Score> ().SendMessage ("BlockRemoved");
-
-
-
-	}
-
 }
 
