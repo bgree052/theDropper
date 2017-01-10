@@ -5,18 +5,18 @@ public class EndScore : MonoBehaviour {
 
 	public GameObject KEPT;
 
-	public DataHolder Data;
+	public theDataHolder Data;
 
 	int Score;
 
 	void Start(){
 
 
-		Data = KEPT.GetComponent<DataHolder> ();
+		Data = KEPT.GetComponent<theDataHolder> ();
 
-		//Score = Data.LevelCleared;
+        //Score = Data.LevelCleared;
 
-
+        Debug.Log(Data);
 	}
 		
 }

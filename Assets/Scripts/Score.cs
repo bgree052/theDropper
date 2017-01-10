@@ -28,7 +28,7 @@ public class Score : MonoBehaviour {
 
 	public void BlockRemoved () {
 		Deleted++;
-		Debug.Log (Deleted);
+		//Debug.Log (Deleted);
 	}
 
     

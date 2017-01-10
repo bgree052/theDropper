@@ -7,7 +7,6 @@ public class DeleteBlock : MonoBehaviour {
 	public AudioClip click;
 
 
-
     // Use this for initialization
     void Start () {
         ScoreManager = GameObject.Find("ScoreManager");
