@@ -5,6 +5,10 @@ public class DeleteBlock : MonoBehaviour {
 
     GameObject ScoreManager;
 
+	public AudioClip click;
+
+
+
     // Use this for initialization
     void Start () {
         ScoreManager = GameObject.Find("ScoreManager");
@@ -17,7 +21,13 @@ public class DeleteBlock : MonoBehaviour {
 
     void OnMouseDown()
     {
+
+		GetComponent<AudioSource>().volume = 1;
+		GetComponent<AudioSource>().PlayOneShot(click, 1f);
+
         Destroy(gameObject);
+
+
 
         ScoreManager.GetComponent<Score>().SendMessage("BlockRemoved");
 

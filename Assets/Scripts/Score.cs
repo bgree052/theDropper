@@ -20,11 +20,15 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timerScore.text = "Time: " + Mathf.Round(Time.time) + "        Blocks Removed: " + Deleted;
+	
+		if (Mathf.Round(Time.time) == 60) {
+			Application.LoadLevel ("GAME OVER");
+		}
 	}
 
 	public void BlockRemoved () {
 		Deleted++;
-		Debug.Log (Deleted);
+		//Debug.Log (Deleted);
 	}
 
     
