@@ -4,9 +4,7 @@ using System.Collections;
 public class DeleteBlock : MonoBehaviour {
 
     GameObject ScoreManager;
-
 	public AudioClip click;
-
 
 
     // Use this for initialization
