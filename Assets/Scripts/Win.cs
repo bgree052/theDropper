@@ -6,14 +6,14 @@ public class Win : MonoBehaviour {
 
     //GameObject KEPT;
 
-    GameObject DATA; 
+    public GameObject DATA; 
 
     // Use this for initialization
     void Start () {
 
         //KEPT = GameObject.Find("KEPT");
 
-        DATA = transform.Find("DATA").gameObject;
+       // DATA = transform.Find("Data").gameObject;
 
 	}
 	
@@ -28,7 +28,7 @@ public class Win : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("End")) {
 
-            DATA.GetComponent<theDataHolder>().SendMessage("LevelCleared");
+            DATA.SendMessage("LevelCleared");
 
             SceneManager.LoadScene(SceneManager.GetActiveScene ().buildIndex);
 

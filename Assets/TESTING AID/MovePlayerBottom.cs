@@ -1,26 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MovePlayerBottom : MonoBehaviour {
 
-    GameObject Canvas;
+	GameObject Canvas;
 
-    GameObject Player;
+	GameObject player;
 
-    void Start () {
+	void Start() {
+	
+		player = GameObject.Find ("Player");
 
-        Player = GameObject.Find("Player");
-        
-    }
+	
+	}
 
-    void Update()
-    {
-        if (Input.anyKey)
-        {
+	void Update() {
+		if (Input.anyKey){
 
-        Player.GetComponent<Win>().SendMessage("MoveDown");
 
-        }
-    }
+
+
+			Debug.Log ("BUTTON PRESSED");
+		}
+	}
 
 }
